@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 	int pid =getpid();
     ft_printf("%d",pid);
     // ft_putnbr_fd(1,getpid());
-    printf("\n");
+    ft_printf("\n");
 	catch.sa_flags = SA_SIGINFO;
 	catch.sa_sigaction = handler;
 	if ((sigaction(SIGUSR1, &catch, 0)) == -1)
