@@ -1,4 +1,4 @@
-SRCS=		main.c libft/libft.a
+SRCS=		main.c libft/libft.a printf/printf.a 
 
 
 NAME=		make

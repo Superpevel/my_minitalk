@@ -1,4 +1,4 @@
-SRCS=		../libft/libft.a client.c
+SRCS=		../libft/libft.a client.c ../printf/printf.a 
 
 CC=		gcc 
 

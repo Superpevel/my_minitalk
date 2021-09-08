@@ -53,7 +53,8 @@ int main(int argc, char **argv)
     struct sigaction catch;
     
     ft_putstr_fd("The PID is: ",1);
-    printf("%d",getpid());
+	int pid =getpid();
+    ft_printf("%d",pid);
     // ft_putnbr_fd(1,getpid());
     printf("\n");
 	catch.sa_flags = SA_SIGINFO;
