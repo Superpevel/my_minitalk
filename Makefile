@@ -1,24 +1,30 @@
-SRCS=		libft/libft.a printf/printf.a 
+SRCS=	libft/libft.a printf/printf.a
 
 
 NAME=		make
 
-CFLAGS +=	
+CFLAGS +=
 CFLAGS +=	-ansi -pedantic
 CFLAGS +=	-I.
 
 
 all:
-	$(MAKE) -C server
-	$(MAKE) -C printf
-	$(MAKE) -C libft
-	$(MAKE) -C client
+	$(MAKE) -C ./libft
+	$(MAKE) -C ./printf
+	$(MAKE) -C ./server
+	$(MAKE) -C ./client
 
 clean:
-	rm -rvf $(OBJS)
+	cd printf && $(MAKE) clean
+	cd libft && $(MAKE) clean
+	cd server && $(MAKE) clean
+	cd client && $(MAKE) clean
 
 fclean:		clean
-	rm -rvf $(NAME)
+	cd printf && $(MAKE) fclean
+	cd libft && $(MAKE) fclean
+	cd server && $(MAKE) fclean
+	cd client && $(MAKE) fclean
 
 re:		fclean all
 

@@ -38,10 +38,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub = malloc(sizeof(char) * (len + 1));
 		if (!(sub))
 			return (NULL);
+		return (ft_sub_fill(s, start, len, sub));
 	}
 	else
+	{
 		sub = malloc(sizeof(char) * (j + 1));
-	if (!(sub))
-		return (NULL);
-	return (ft_sub_fill(s, start, len, sub));
+		if (!(sub))
+			return (NULL);
+		return (ft_sub_fill(s, start, j, sub));
+	}
 }
