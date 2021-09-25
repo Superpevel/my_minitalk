@@ -1,4 +1,4 @@
-SRCS=		main.c libft/libft.a printf/printf.a 
+SRCS=		libft/libft.a printf/printf.a 
 
 
 NAME=		make
@@ -10,6 +10,8 @@ CFLAGS +=	-I.
 
 all:
 	$(MAKE) -C server
+	$(MAKE) -C printf
+	$(MAKE) -C libft
 	$(MAKE) -C client
 
 clean:

@@ -2,7 +2,7 @@
 
 void	error(char *str)
 {
-	ft_putstr_fd(str,1);
+	ft_putstr_fd(str, 1);
 	exit(0);
 }
 
@@ -14,7 +14,7 @@ void	decimal_conversion(char ascii, int power, int pid)
 	{
 		if (kill(pid, SIGUSR1) == -1)
 		{
-			ft_putstr_fd("Error signal!\n",1);
+			ft_putstr_fd("Error signal!\n", 1);
 			exit(0);
 		}
 	}
@@ -22,7 +22,7 @@ void	decimal_conversion(char ascii, int power, int pid)
 	{
 		if (kill(pid, SIGUSR2) == -1)
 		{
-			ft_putstr_fd("Error signal!\n",1);
+			ft_putstr_fd("Error signal!\n", 1);
 			exit(0);
 		}
 	}
@@ -41,12 +41,13 @@ int	send_message(int server_pid, char *msg)
 	}
 	return (0);
 }
-void handler(int signum, siginfo_t *siginfo, void *unused)
+
+void	handler(int signum, siginfo_t *siginfo, void *unused)
 {
-	ft_putstr_fd("Signal received\n",1);
+	ft_putstr_fd("Signal received\n", 1);
 }
 
-int main(int argc,char **argv)
+int	main(int argc, char **argv)
 {
 	struct sigaction	catch;
 
@@ -60,5 +61,5 @@ int main(int argc,char **argv)
 		error("Error arguments\n");
 	while (1)
 		pause();
-   return(0);
+	return (0);
 }
