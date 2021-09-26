@@ -1,10 +1,10 @@
 SRCS=		../libft/libft.a client.c
 
-CC=		gcc 
+CC=		gcc
 
 NAME=		client
 
-CFLAGS +=	
+CFLAGS +=
 CFLAGS +=	-ansi -pedantic
 CFLAGS +=	-I.
 
@@ -13,8 +13,8 @@ OBJS=		$(SRCS:.c=.o)
 all:		$(NAME)
 
 
-$(NAME):	$(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(SRCS) 
+$(NAME):	$(OBJS) ../minitalk.h
+	$(CC) $(CFLAGS) -o $(NAME) $(SRCS)
 
 
 clean:
