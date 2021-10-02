@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/26 17:57:47 by selbert           #+#    #+#             */
+/*   Updated: 2021/09/26 18:20:21 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../minitalk.h"
 
 void	error(char *str)
@@ -5,6 +17,9 @@ void	error(char *str)
 	ft_putstr_fd(str, 1);
 	exit(0);
 }
+
+
+
 
 void	decimal_conversion(char ascii, int power, int pid)
 {
@@ -26,7 +41,7 @@ void	decimal_conversion(char ascii, int power, int pid)
 			exit(0);
 		}
 	}
-	usleep(100);
+	usleep(500);
 }
 
 int	send_message(int server_pid, char *msg)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/26 17:56:01 by selbert           #+#    #+#             */
+/*   Updated: 2021/10/02 13:04:40 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../minitalk.h"
 #include <unistd.h>
 #include <signal.h>
@@ -9,22 +21,25 @@ void	error(char *str)
 	exit(0);
 }
 
-void	sig_to_str(int bin)
+void	handler(int signum, siginfo_t *siginfo, void *unused)
 {
-	char	c;
-	int		i;
+	static int	ascii;
+	static int	power;
 
-	i = 0;
-	c = '\0';
-	c += (bin << i++);
-	if (i > 7)
+	(void)unused;
+	if (signum == SIGUSR1)
+	{
+		ascii += 1 << (7 - power);
+	}
+	power += 1;
+	if (power == 8)
 	{
 		if (c == '\0')
 			ft_putchar_fd('\n', 1);
 		else
-			ft_putchar_fd(c, 1);
-		c = 0;
-		i = 0;
+			ft_putchar_fd(ascii, 1);
+		ascii=0;
+		power=0;
 	}
 }
 

@@ -14,6 +14,10 @@ all:
 	$(MAKE) -C ./server
 	$(MAKE) -C ./client
 
+$(NAME):	minitalk.h Makefile
+		$(MAKE) -C libft
+		$(MAKE) -C server
+		$(MAKE) -C client
 clean:
 	cd printf && $(MAKE) clean
 	cd libft && $(MAKE) clean
