@@ -6,7 +6,7 @@
 /*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 17:57:47 by selbert           #+#    #+#             */
-/*   Updated: 2021/09/26 18:20:21 by selbert          ###   ########.fr       */
+/*   Updated: 2021/10/02 13:18:58 by selbert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ void	error(char *str)
 	ft_putstr_fd(str, 1);
 	exit(0);
 }
-
-
-
 
 void	decimal_conversion(char ascii, int power, int pid)
 {

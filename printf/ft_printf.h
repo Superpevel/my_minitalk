@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:22:59 by selbert           #+#    #+#             */
+/*   Updated: 2021/10/02 13:14:15 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include "../libft/libft.h"
@@ -37,7 +49,7 @@ int		handle_X(t_flag flag, unsigned int num);
 int		x_zero(t_flag flag, long num);
 int		x_handle(t_flag flag, unsigned int num);
 int		u_handle(t_flag flag, unsigned int num);
-char	*ft_ull_base(unsigned long long ull, int base);
+char	*ft_ull_base(unsigned long ull, int base);
 t_flag	get_params(const char *p, t_flag flag, va_list *argptr);
 char	*ft_u_itoa(unsigned int n);
 int		handle_p(t_flag flag, void *pointer);

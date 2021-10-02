@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   x_handle.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:23:43 by selbert           #+#    #+#             */
+/*   Updated: 2021/09/25 13:23:45 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	check_what(t_flag *flag, int len)
@@ -51,7 +63,7 @@ char	*to_lower_str(char *hexa)
 	int	i;
 
 	i = 0;
-	while (hexa[i] !='\0')
+	while (hexa[i] != '\0')
 	{
 		hexa[i] = ft_tolower(hexa[i]);
 		i++;
@@ -70,7 +82,7 @@ int	x_handle(t_flag flag, unsigned int num)
 	flag.zeros = x_zero(flag, num);
 	if (flag.zeros >= 0)
 		return (flag.zeros);
-	hexa = ft_ull_base((unsigned long long)num, 16);
+	hexa = ft_ull_base((unsigned long long) num, 16);
 	hexa = to_lower_str(hexa);
 	len = ft_strlen(hexa);
 	if (num != 0)

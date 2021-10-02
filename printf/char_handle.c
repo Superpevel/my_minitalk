@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   char_handle.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:22:17 by selbert           #+#    #+#             */
+/*   Updated: 2021/09/25 13:29:35 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -5,7 +16,7 @@ int	print_char2(char c, t_flag flag, int words)
 {
 	if (flag.right == 1)
 	{
-		while (flag.before_dot-- -1 > 0)
+		while (flag.before_dot-- - 1 > 0)
 		{
 			ft_putchar_fd(' ', 1);
 			words++;
@@ -28,7 +39,7 @@ int	print_char(char c, t_flag flag)
 		words++;
 		if (flag.before_dot < 0)
 			flag.before_dot *= -1;
-		while (flag.before_dot-- -1 > 0)
+		while (flag.before_dot-- - 1 > 0)
 		{
 			ft_putchar_fd(' ', 1);
 			words++;

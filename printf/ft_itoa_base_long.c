@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base_long.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:22:37 by selbert           #+#    #+#             */
+/*   Updated: 2021/10/02 13:13:58 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-static char	*treat_base(unsigned long long ull_save, int base,
+static char	*treat_base(unsigned long ull_save, int base,
 char *rtn, int count)
 {
 	while (ull_save != 0)
@@ -15,7 +27,7 @@ char *rtn, int count)
 	return (rtn);
 }
 
-char	*ft_ull_base(unsigned long long ull, int base)
+char	*ft_ull_base(unsigned long ull, int base)
 {
 	char				*rtn;
 	unsigned long long	ull_save;

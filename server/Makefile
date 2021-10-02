@@ -1,13 +1,11 @@
-SRCS=		../libft/libft.a server.c ../printf/printf.a 
+SRCS=		../libft/libft.a server.c ../printf/printf.a
 
 CC=		gcc
 
 NAME=		server
 
 CFLAGS +=
-CFLAGS +=	-ansi -pedantic
-CFLAGS +=	-I.
-
+CFLAGS +=	-Wall -Wextra -Werror
 OBJS=		$(SRCS:.c=.o)
 
 all:		$(NAME)

@@ -7,6 +7,7 @@ CFLAGS +=
 CFLAGS +=	-ansi -pedantic
 CFLAGS +=	-I.
 
+.DEFAULT_GOAL := all
 
 all:
 	$(MAKE) -C ./libft

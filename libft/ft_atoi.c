@@ -6,7 +6,7 @@
 /*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 13:24:28 by selbert           #+#    #+#             */
-/*   Updated: 2021/10/02 13:05:37 by selbert          ###   ########.fr       */
+/*   Updated: 2021/09/25 13:34:26 by selbert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	is_space(char c)
 		return (0);
 }
 
-int	ft_isdigit1 (char c)
+int	ft_isdigit1(char c)
 {
 	if ((c >= '0') && (c <= '9'))
 		return (1);

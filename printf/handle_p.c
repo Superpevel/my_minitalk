@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_p.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:23:09 by selbert           #+#    #+#             */
+/*   Updated: 2021/09/25 13:28:06 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	p_zero(t_flag flag, long num)
@@ -46,7 +58,7 @@ int	print_p(t_flag flag, int words, unsigned long long num, char *out)
 		words = words_out(num, words, prefix, out);
 	words = ft_write(flag.spaces, words, 1);
 	if (flag.right == 1)
-		words =ft_write(flag.zeros, words, 2);
+		words = ft_write(flag.zeros, words, 2);
 	if (flag.right == 1)
 		words = words_out(num, words, prefix, out);
 	return (words);

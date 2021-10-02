@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   int_handle_2.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/25 13:23:27 by selbert           #+#    #+#             */
+/*   Updated: 2021/09/25 13:23:29 by selbert          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	check_zero(int t, t_flag flag)
@@ -70,7 +82,7 @@ int	words1(t_flag flag, int width, char *out)
 		}
 		write(1, out, ft_strlen(out));
 		words += (int)ft_strlen(out);
-		while (flag.before_dot-- -width > 0)
+		while (flag.before_dot-- - width > 0)
 		{
 			ft_putchar_fd(' ', 1);
 			words++;

@@ -6,7 +6,7 @@
 /*   By: selbert <selbert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 17:56:01 by selbert           #+#    #+#             */
-/*   Updated: 2021/10/02 13:04:40 by selbert          ###   ########.fr       */
+/*   Updated: 2021/10/02 13:15:52 by selbert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,30 +34,6 @@ void	handler(int signum, siginfo_t *siginfo, void *unused)
 	power += 1;
 	if (power == 8)
 	{
-		if (c == '\0')
-			ft_putchar_fd('\n', 1);
-		else
-			ft_putchar_fd(ascii, 1);
-		ascii=0;
-		power=0;
-	}
-}
-
-void	handler(int signum, siginfo_t *siginfo, void *unused)
-{
-	static int	ascii;
-	static int	power;
-
-	power = 0;
-	ascii = 0;
-	(void)unused;
-	if (signum == SIGUSR1)
-	{
-		ascii += 1 << (7 - power);
-	}
-	power += 1;
-	if (power == 8)
-	{
 		ft_putchar_fd(ascii, 1);
 		power = 0;
 		ascii = 0;
@@ -71,6 +47,8 @@ int	main(int argc, char **argv)
 	struct sigaction	catch;
 	int					pid;
 
+	(void)argv;
+	(void)argc;
 	pid = getpid();
 	ft_putstr_fd("The PID is: ", 1);
 	ft_printf("%d", pid);
